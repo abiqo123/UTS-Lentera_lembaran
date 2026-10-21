@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Lentera Lembaran</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header-situs">
+        <div class="navbar">
+            <a class="logo" href="index.html">Lentera Lembaran</a>
+            <button class="burger" type="button" aria-expanded="false" aria-controls="menu-utama">Menu</button>
+            <nav aria-label="Navigasi utama">
+                <ul class="menu" id="menu-utama">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html" class="on" aria-current="page" id="tautan-login">Login</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="judul-halaman">
+            <div class="container">
+                <h1>Masuk atau Daftar</h1>
+                <p>Masuk agar Anda dikenali setiap kali kembali ke ruang baca ini.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="pilihan pusat" role="group" aria-label="Pilih formulir">
+                <button type="button" class="on" data-form="login" aria-pressed="true">Masuk</button>
+                <button type="button" data-form="daftar" aria-pressed="false">Daftar</button>
+            </div>
+
+            <form class="form" id="form-login" novalidate>
+                <h2>Masuk</h2>
+                <div class="fld">
+                    <label for="l-akun">Username atau email</label>
+                    <input id="l-akun" name="akun" type="text" autocomplete="username">
+                    <small class="err" data-untuk="akun" data-aturan="wajib"></small>
+                </div>
+                <div class="fld">
+                    <label for="l-sandi">Kata sandi</label>
+                    <input id="l-sandi" name="sandi" type="password" autocomplete="current-password">
+                    <small class="err" data-untuk="sandi" data-aturan="wajib"></small>
+                </div>
+                <button class="btn" type="submit">Masuk</button>
+                <p class="hasil" role="status" hidden></p>
+            </form>
+
+            <form class="form" id="form-daftar" novalidate hidden>
+                <h2>Buat akun</h2>
+                <div class="fld">
+                    <label for="d-nama">Nama lengkap</label>
+                    <input id="d-nama" name="nama" type="text" autocomplete="name">
+                    <small class="err" data-untuk="nama" data-aturan="wajib"></small>
+                </div>
+                <div class="fld">
+                    <label for="d-username">Nama pengguna</label>
+                    <input id="d-username" name="username" type="text" autocomplete="username">
+                    <small class="err" data-untuk="username"></small>
+                </div>
+                <div class="fld">
+                    <label for="d-surel">Email</label>
+                    <input id="d-surel" name="surel" type="email" autocomplete="email">
+                    <small class="err" data-untuk="surel"></small>
+                </div>
+                <div class="fld">
+                    <label for="d-sandi">Kata sandi</label>
+                    <input id="d-sandi" name="sandi" type="password" autocomplete="new-password">
+                    <small class="err" data-untuk="sandi"></small>
+                </div>
+                <div class="fld">
+                    <label for="d-ulang">Konfirmasi kata sandi</label>
+                    <input id="d-ulang" name="ulang" type="password" autocomplete="new-password">
+                    <small class="err" data-untuk="ulang"></small>
+                </div>
+                <button class="btn" type="submit">Daftar</button>
+                <p class="hasil" role="status" hidden></p>
+            </form>
+
+            <p class="catatan pusat-teks">Akun disimpan di peramban pada perangkat ini.</p>
+        </div>
+    </main>
+
+    <footer class="footer-situs">
+        <div class="container footer-isi">
+            <div>
+                <a class="logo" href="index.html">Lentera Lembaran</a>
+                <p>Cahaya kecil pada setiap kisah.</p>
+            </div>
+            <ul class="footer-tautan">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </div>
+        <p class="footer-hak">&copy; 2026 Lentera Lembaran</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>

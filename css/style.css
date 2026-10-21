@@ -1,0 +1,831 @@
+:root {
+    --ungu: #6246ea;
+    --ungu-tua: #4a35c9;
+    --biru: #2f62d8;
+    --lavender: #eeebfb;
+    --putih: #ffffff;
+    --latar: #f8f7ff;
+    --teks: #2b2661;
+    --teks-lembut: #5d5990;
+    --garis: #e2def7;
+    --galat: #b3261e;
+    --gradasi: linear-gradient(135deg, #4a35c9 0%, #3b4fd8 55%, #2f62d8 100%);
+    --bayangan: 0 12px 32px rgba(74, 53, 201, 0.14);
+    --font-teks: "Segoe UI", system-ui, sans-serif;
+    --font-judul: "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-teks);
+    color: var(--teks);
+    background: var(--latar);
+    line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: var(--font-judul);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--ungu);
+    outline-offset: 3px;
+}
+
+.sr {
+    position: absolute;
+    left: -9999px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.catatan {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: var(--teks-lembut);
+}
+
+.pusat-teks {
+    text-align: center;
+}
+
+.aksi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 24px;
+    border: 1.5px solid var(--ungu);
+    border-radius: 6px;
+    background: var(--ungu);
+    font: inherit;
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--putih);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--biru);
+    border-color: var(--biru);
+}
+
+.btn-garis {
+    background: transparent;
+    color: var(--ungu);
+}
+
+.btn-garis:hover {
+    background: var(--lavender);
+    border-color: var(--ungu);
+}
+
+.btn-putih {
+    background: var(--putih);
+    border-color: var(--putih);
+    color: var(--ungu-tua);
+}
+
+.btn-putih:hover {
+    background: var(--lavender);
+    border-color: var(--lavender);
+}
+
+.btn-kecil {
+    padding: 6px 16px;
+    font-size: 0.86rem;
+}
+
+.header-situs {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(248, 247, 255, 0.94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--garis);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 28px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.logo::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--ungu);
+    box-shadow: 0 0 12px 3px rgba(98, 70, 234, 0.45);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.menu a {
+    padding: 4px 0;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: none;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--teks-lembut);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: var(--teks);
+}
+
+.menu a.on {
+    color: var(--teks);
+    border-bottom-color: var(--ungu);
+}
+
+.burger {
+    display: none;
+    padding: 6px 14px;
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+    background: var(--putih);
+    font: inherit;
+    color: var(--teks);
+    cursor: pointer;
+}
+
+.hero {
+    padding: 80px 0 76px;
+    background-color: #3b4fd8;
+    background-image:
+        linear-gradient(90deg, rgba(36, 40, 140, 0.92) 0%, rgba(40, 60, 190, 0.7) 45%, rgba(40, 60, 190, 0.1) 100%),
+        url("../images/lentera.jpg");
+    background-position: center;
+    background-size: cover;
+    color: var(--putih);
+}
+
+.hero-isi {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero h1 {
+    margin-bottom: 12px;
+    font-size: 3.6rem;
+}
+
+.semboyan {
+    margin-bottom: 16px;
+    font-family: var(--font-judul);
+    font-size: 1.35rem;
+    font-style: italic;
+    color: #e4dfff;
+}
+
+.lead {
+    max-width: 460px;
+    margin-bottom: 30px;
+    color: #f0edff;
+}
+
+.hero .btn-garis {
+    border-color: rgba(255, 255, 255, 0.75);
+    color: var(--putih);
+}
+
+.hero .btn-garis:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: var(--putih);
+}
+
+.terakhir {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #e4dfff;
+}
+
+.hero-kutipan {
+    justify-self: end;
+    max-width: 260px;
+    padding-top: 14px;
+    border-top: 2px solid rgba(255, 255, 255, 0.6);
+    font-family: var(--font-judul);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    text-shadow: 0 1px 8px rgba(20, 20, 80, 0.7);
+}
+
+.judul-halaman {
+    padding: 64px 0 44px;
+    background: var(--gradasi);
+    color: var(--putih);
+}
+
+.judul-halaman h1 {
+    font-size: 2.5rem;
+}
+
+.judul-halaman p {
+    max-width: 580px;
+    margin-top: 6px;
+    color: #f0edff;
+}
+
+.bagian {
+    padding: 64px 0 0;
+}
+
+.bagian-kepala {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.bagian-kepala h2 {
+    font-size: 1.7rem;
+}
+
+.bagian-kepala a {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--ungu);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+
+.pengantar {
+    max-width: 840px;
+}
+
+.pengantar h2 {
+    margin-bottom: 12px;
+    font-size: 1.9rem;
+}
+
+.pengantar p {
+    color: var(--teks-lembut);
+}
+
+.rak {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 34px 22px;
+}
+
+.kartu {
+    position: relative;
+}
+
+.kartu h3 {
+    margin: 14px 0 2px;
+    font-size: 1.02rem;
+}
+
+.kartu:hover .sampul {
+    transform: translateY(-4px);
+}
+
+.penulis {
+    font-size: 0.88rem;
+    color: var(--teks-lembut);
+}
+
+.ringkasan {
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.tag {
+    display: inline-block;
+    margin: 6px 0;
+    padding: 1px 10px;
+    border-radius: 20px;
+    background: var(--lavender);
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--ungu-tua);
+}
+
+.sampul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    aspect-ratio: 2 / 3;
+    padding: 16px 14px;
+    overflow: hidden;
+    border-radius: 3px 8px 8px 3px;
+    box-shadow: inset 5px 0 0 rgba(255, 255, 255, 0.22), 0 6px 18px rgba(74, 53, 201, 0.18);
+    color: var(--putih);
+    transition: 0.25s;
+}
+
+.sampul::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--putih);
+    box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.45);
+}
+
+.sampul img {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sampul-judul {
+    position: relative;
+    font-family: var(--font-judul);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.sampul-penulis {
+    position: relative;
+    margin-top: 8px;
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+}
+
+.warna-0 {
+    background: linear-gradient(160deg, #6246ea, #3b4fd8);
+}
+
+.warna-1 {
+    background: linear-gradient(160deg, #2f62d8, #4a35c9);
+}
+
+.warna-2 {
+    background: linear-gradient(160deg, #7a5af5, #4a35c9);
+}
+
+.warna-3 {
+    background: linear-gradient(160deg, #3b4fd8, #2f62d8);
+}
+
+.warna-4 {
+    border: 1px solid var(--garis);
+    background: linear-gradient(160deg, #ffffff, #e4defc);
+    color: var(--ungu-tua);
+}
+
+.warna-4::after {
+    background: var(--ungu);
+    box-shadow: 0 0 10px 4px rgba(98, 70, 234, 0.3);
+}
+
+.pilihan {
+    display: inline-flex;
+    padding: 4px;
+    border: 1px solid var(--garis);
+    border-radius: 10px;
+    background: var(--putih);
+}
+
+.pilihan button {
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--teks-lembut);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pilihan button.on {
+    background: var(--ungu);
+    color: var(--putih);
+}
+
+.pilihan.pusat {
+    display: flex;
+    max-width: 460px;
+    margin: 44px auto 18px;
+}
+
+.pilihan.pusat button {
+    flex: 1;
+}
+
+.daftar-artikel {
+    display: grid;
+    gap: 18px;
+    list-style: none;
+}
+
+.artikel {
+    padding: 24px 26px;
+    border: 1px solid var(--garis);
+    border-left: 4px solid var(--ungu);
+    border-radius: 8px;
+    background: var(--putih);
+}
+
+.artikel h3 {
+    margin: 4px 0 6px;
+    font-size: 1.2rem;
+}
+
+.artikel p {
+    font-size: 0.95rem;
+    color: var(--teks-lembut);
+}
+
+.artikel .artikel-isi {
+    margin-top: 10px;
+    color: var(--teks);
+}
+
+.artikel .btn {
+    margin-top: 14px;
+}
+
+.dua-kolom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.blok {
+    margin-bottom: 28px;
+}
+
+.blok h3 {
+    margin-bottom: 4px;
+    font-size: 1.15rem;
+    color: var(--ungu);
+}
+
+.blok p,
+.blok li {
+    color: var(--teks-lembut);
+}
+
+.blok ul {
+    padding-left: 18px;
+}
+
+.nilai {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 12px;
+    padding-top: 34px;
+    border-top: 1px solid var(--garis);
+}
+
+.nilai h3 {
+    font-size: 1.1rem;
+}
+
+.nilai p {
+    font-size: 0.93rem;
+    color: var(--teks-lembut);
+}
+
+.form {
+    max-width: 460px;
+    margin: 0 auto 20px;
+    padding: 30px;
+    border: 1px solid var(--garis);
+    border-radius: 10px;
+    background: var(--putih);
+}
+
+.form h2 {
+    margin-bottom: 14px;
+    font-size: 1.5rem;
+}
+
+.fld {
+    margin-bottom: 10px;
+}
+
+.fld label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.fld input {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+    background: var(--latar);
+    font: inherit;
+    color: inherit;
+}
+
+.fld input:focus {
+    outline: none;
+    border-color: var(--ungu);
+    background: var(--putih);
+}
+
+.err {
+    display: block;
+    min-height: 18px;
+    font-size: 0.8rem;
+    color: var(--galat);
+}
+
+.hasil {
+    margin-top: 14px;
+    padding: 11px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.hasil.ok {
+    background: var(--lavender);
+    color: var(--ungu-tua);
+}
+
+.hasil.gagal {
+    background: #fdecea;
+    color: #9a1f15;
+}
+
+.modal {
+    width: min(720px, calc(100% - 32px));
+    max-height: calc(100vh - 32px);
+    margin: auto;
+    padding: 0;
+    overflow-y: auto;
+    border: 0;
+    border-radius: 14px;
+    background: var(--putih);
+    color: var(--teks);
+    box-shadow: 0 24px 60px rgba(43, 38, 97, 0.35);
+}
+
+.modal::backdrop {
+    background: rgba(74, 53, 201, 0.45);
+    backdrop-filter: blur(3px);
+}
+
+.modal-isi {
+    position: relative;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 28px;
+    padding: 32px;
+}
+
+.modal-isi h2 {
+    margin: 6px 0 2px;
+    font-size: 1.6rem;
+}
+
+.modal-tutup {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--lavender);
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--ungu-tua);
+    cursor: pointer;
+}
+
+.modal-pilih {
+    display: block;
+    text-align: center;
+}
+
+.modal-pilih h2 {
+    margin-top: 0;
+    padding: 0 30px;
+}
+
+.pilih-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 22px;
+    text-align: left;
+}
+
+.pilih-kartu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 22px;
+    border: 1.5px solid var(--garis);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.pilih-kartu:hover {
+    border-color: var(--ungu);
+    background: var(--lavender);
+}
+
+.pilih-kartu strong {
+    font-family: var(--font-judul);
+    font-size: 1.3rem;
+    color: var(--ungu-tua);
+}
+
+.pilih-kartu span {
+    font-size: 0.9rem;
+    color: var(--teks-lembut);
+}
+
+.footer-situs {
+    margin-top: 90px;
+    padding: 44px 0 26px;
+    background: var(--gradasi);
+    color: var(--putih);
+    font-size: 0.92rem;
+}
+
+.footer-isi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-situs .logo {
+    margin-bottom: 6px;
+    color: var(--putih);
+}
+
+.footer-situs .logo::before {
+    background: var(--putih);
+    box-shadow: 0 0 12px 3px rgba(255, 255, 255, 0.5);
+}
+
+.footer-tautan {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.footer-tautan a {
+    text-decoration: none;
+}
+
+.footer-tautan a:hover {
+    text-decoration: underline;
+}
+
+.footer-hak {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 0.82rem;
+}
+
+@media (max-width: 1000px) {
+    .rak {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 820px) {
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 6px 28px 14px;
+        border-bottom: 1px solid var(--garis);
+        background: var(--latar);
+    }
+
+    .menu.buka {
+        display: flex;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .hero-isi,
+    .dua-kolom,
+    .nilai,
+    .modal-isi {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        background-image:
+            linear-gradient(rgba(36, 40, 140, 0.85), rgba(40, 60, 190, 0.85)),
+            url("../images/lentera.jpg");
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .rak {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .rak {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 16px;
+    }
+
+    .pilih-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-isi {
+        padding: 24px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

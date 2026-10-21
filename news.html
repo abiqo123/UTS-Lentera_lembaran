@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News | Lentera Lembaran</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header-situs">
+        <div class="navbar">
+            <a class="logo" href="index.html">Lentera Lembaran</a>
+            <button class="burger" type="button" aria-expanded="false" aria-controls="menu-utama">Menu</button>
+            <nav aria-label="Navigasi utama">
+                <ul class="menu" id="menu-utama">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html" id="tautan-login">Login</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html" class="on" aria-current="page">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="judul-halaman">
+            <div class="container">
+                <h1>News</h1>
+                <p>Catatan ringan tentang kebiasaan membaca, pilihan bacaan, dan cara menikmatinya.</p>
+            </div>
+        </section>
+
+        <section class="bagian">
+            <div class="container">
+                <ul class="daftar-artikel" id="daftar-news"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-situs">
+        <div class="container footer-isi">
+            <div>
+                <a class="logo" href="index.html">Lentera Lembaran</a>
+                <p>Cahaya kecil pada setiap kisah.</p>
+            </div>
+            <ul class="footer-tautan">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </div>
+        <p class="footer-hak">&copy; 2026 Lentera Lembaran</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

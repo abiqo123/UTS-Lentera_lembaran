@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Lentera Lembaran</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header-situs">
+        <div class="navbar">
+            <a class="logo" href="index.html">Lentera Lembaran</a>
+            <button class="burger" type="button" aria-expanded="false" aria-controls="menu-utama">Menu</button>
+            <nav aria-label="Navigasi utama">
+                <ul class="menu" id="menu-utama">
+                    <li><a href="index.html" class="on" aria-current="page">Home</a></li>
+                    <li><a href="login.html" id="tautan-login">Login</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-isi">
+                <div>
+                    <h1>Lentera Lembaran</h1>
+                    <p class="semboyan">Cahaya kecil pada setiap kisah.</p>
+                    <p class="lead">
+                        Ruang membaca yang tenang untuk menemukan buku dan novel pilihan,
+                        lengkap dengan ringkasan yang membantu Anda memilih halaman pertama.
+                    </p>
+                    <div class="aksi">
+                        <button class="btn btn-putih" type="button" data-dialog>Mulai Membaca</button>
+                        <a class="btn btn-garis" href="#buku">Lanjut Membaca</a>
+                    </div>
+                </div>
+                <blockquote class="hero-kutipan">
+                    Buku bukan hanya sekadar bacaan, tetapi jendela menuju dunia yang lebih luas.
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="bagian">
+            <div class="container pengantar">
+                <h2>Ruang yang teduh untuk menemukan bacaan.</h2>
+                <p>
+                    Lentera Lembaran menghimpun buku nonfiksi dan novel dalam satu tempat yang tenang.
+                    Setiap judul disertai ringkasan singkat, sehingga menemukan bacaan terasa seperti
+                    menyalakan lampu kecil di ruangan yang gelap.
+                </p>
+            </div>
+        </section>
+
+        <section class="bagian" id="buku">
+            <div class="container">
+                <div class="bagian-kepala">
+                    <h2>Buku populer</h2>
+                </div>
+                <div class="rak" id="rak-buku"></div>
+            </div>
+        </section>
+
+        <section class="bagian" id="novel">
+            <div class="container">
+                <div class="bagian-kepala">
+                    <h2>Novel pilihan</h2>
+                </div>
+                <div class="rak" id="rak-novel"></div>
+            </div>
+        </section>
+
+        <section class="bagian">
+            <div class="container">
+                <div class="bagian-kepala">
+                    <h2>News terbaru</h2>
+                    <a href="news.html">Semua news</a>
+                </div>
+                <ul class="daftar-artikel" id="daftar-news" data-jumlah="2"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-situs">
+        <div class="container footer-isi">
+            <div>
+                <a class="logo" href="index.html">Lentera Lembaran</a>
+                <p>Cahaya kecil pada setiap kisah.</p>
+            </div>
+            <ul class="footer-tautan">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </div>
+        <p class="footer-hak">&copy; 2026 Lentera Lembaran</p>
+    </footer>
+
+    <dialog class="modal" id="dialog-pilih" aria-labelledby="judul-pilih">
+        <div class="modal-isi modal-pilih">
+            <button class="modal-tutup" type="button" data-tutup aria-label="Tutup">&times;</button>
+            <h2 id="judul-pilih">Apa yang ingin Anda baca hari ini?</h2>
+            <p>Pilih jenis bacaan untuk melanjutkan.</p>
+            <div class="pilih-grid">
+                <a class="pilih-kartu" href="#novel">
+                    <strong>Novel</strong>
+                    <span>Kisah rekaan tentang dunia, manusia, dan kemungkinan yang belum terjadi.</span>
+                </a>
+                <a class="pilih-kartu" href="#buku">
+                    <strong>Buku</strong>
+                    <span>Bacaan nonfiksi untuk memahami sejarah, ilmu pengetahuan, dan diri sendiri.</span>
+                </a>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
